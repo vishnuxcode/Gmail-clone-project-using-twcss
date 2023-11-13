@@ -6,8 +6,13 @@
     <title>Gmail UI clone using Tailwindcss</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" type="image/x-icon">
+    <style>
+        #compose:hover{
+            box-shadow:rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+    </style>
 </head>
-<body class="bg-[#f6f8fc] ">
+<body class="bg-[#f6f8fc] h-screen w-screen ">
 
     <!-- Head Bar goes here  -->
     <header class="flex h-[64px] p-[8px] ">
@@ -39,6 +44,20 @@
     </header>
     <!-- Head Bar ends here  -->
 
+    <!-- Side Bar goes here! -->
+    <div class="group hidden md:flex md:flex-col items-center hover:items-start w-[72px] h-full hover:w-[256px] bg-[#f6f8fc] z-10 transition-all ease-out duration-200">
+            <button type="button" id="compose" class="mt-[8px] mb-[16px] h-[56px] w-[56px] rounded-xl bg-[#c2e7ff] group-hover:w-[143px] bg-[url('https://www.gstatic.com/images/icons/material/system_gm/1x/create_black_24dp.png')] bg-no-repeat bg-center group-hover:bg-[center_left_15px] group-hover:after:content-['Compose'] pl-[20px] ml-[8px]"></button>
+        
+                <button aria-label="Inbox" title="Inbox" class=" w-[32px] h-[32px] rounded-full group-hover:w-[240px] hover:bg-[#e9eef6] focus:bg-blue-300 focus:bg-[url('https://ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/inbox_fill_baseline_p900_20dp.png')] bg-[url('https://ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/inbox_baseline_nv700_20dp.png')] bg-no-repeat bg-center group-hover:bg-[center_left_28px] group-hover:after:content-['Inbox'] focus:font-semibold group-hover:rounded-r-full group-hover:rounded-l-none pl-[20px] group-hover:pr-[100px]"></button>
+            
+                <button aria-label="Starred" title="Starred" class=" w-[32px] h-[32px] rounded-full group-hover:w-[240px] hover:bg-[#e9eef6] focus:bg-blue-300 focus:bg-[url('https://ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/star_fill_baseline_p900_20dp.png')] bg-[url('https://ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/star_baseline_nv700_20dp.png')] bg-no-repeat bg-center group-hover:bg-[center_left_28px] group-hover:after:content-['Starred'] focus:font-semibold group-hover:rounded-r-full group-hover:rounded-l-none pl-[20px] group-hover:pr-[90px]"></button>
 
+                <button aria-label="Snoozed" title="Snoozed" class=" w-[32px] h-[32px] rounded-full group-hover:w-[240px] hover:bg-[#e9eef6] focus:bg-blue-300 focus:bg-[url('https://ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/schedule_fill_baseline_p900_20dp.png')] bg-[url('https://ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/schedule_baseline_nv700_20dp.png')] bg-no-repeat bg-center group-hover:bg-[center_left_28px] group-hover:after:content-['Snoozed'] focus:font-semibold group-hover:rounded-r-full group-hover:rounded-l-none pl-[20px] group-hover:pr-[80px]"></button>
+
+                <button aria-label="Sent" title="Sent" class=" w-[32px] h-[32px] rounded-full group-hover:w-[240px] hover:bg-[#e9eef6] focus:bg-blue-300 focus:bg-[url('https://ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/send_fill_baseline_p900_20dp.png')] bg-[url('https://ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/send_baseline_nv700_20dp.png')] bg-no-repeat bg-center group-hover:bg-[center_left_28px] group-hover:after:content-['Sent'] focus:font-semibold group-hover:rounded-r-full group-hover:rounded-l-none pl-[20px] group-hover:pr-[110px]"></button>
+
+                <button aria-label="Drafts" title="Drafts" class=" w-[32px] h-[32px] rounded-full group-hover:w-[240px] hover:bg-[#e9eef6] focus:bg-blue-300 focus:bg-[url('https://ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/draft_fill_baseline_p900_20dp.png')] bg-[url('https://ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/draft_baseline_nv700_20dp.png')] bg-no-repeat bg-center group-hover:bg-[center_left_28px] group-hover:after:content-['Drafts'] focus:font-semibold group-hover:rounded-r-full group-hover:rounded-l-none pl-[20px] group-hover:pr-[100px]"></button>
+    </div>
+    <!-- Side bar end here! -->
 </body>
 </html>
